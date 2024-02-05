@@ -154,3 +154,57 @@ const person22 = { name: 'Jane', age: 45, occupation: 'Data Analyst' }
 const personInfo = ({name,age})=>`${name} is ${age} years old `
 console.log(personInfo(person1)) // Expected output: "John is 25 years old."
 console.log(personInfo(person22)) // Expected output: "Jane is 45 years old."
+
+
+/// ************** set 3 **************///
+
+///1 Create a function that takes an array of strings as an argument and returns a string that includes the number of items in the array and the first and last items.
+
+// Your ES6 code here
+
+const items = ['apple', 'banana', 'orange'];
+const formatArray = fruitArr =>`The array has ${fruitArr.length} items, and the first items is ${fruitArr[0]}, and the last item is ${fruitArr[fruitArr.length -1]}`
+const message = formatArray(items)
+console.log(message)
+// The array has 3 items, and the first item is "apple", and the last item is "orange".
+
+//2Create a function that takes a product object as an argument and returns a string that includes the product name, price, and a message based on whether it is in stock or not.
+
+// Your ES6 code here
+
+const product = {
+    name: 'Socks',
+    price: 249,
+    inStock: true,
+  }
+  const formatProduct = ({name,price,inStock})=>inStock?`${name} costs INR ${price} and is in stock`:`the ${name} is out of stock`
+  const message2 = formatProduct(product);
+  
+  console.log(message2)
+  // Socks costs INR 249 and is in stock.
+
+//   //3Write a function findPerson that takes an array of person objects and a name as parameters and returns the object with the matching name, or null if not found.
+
+// // Your ES6 code here
+// const findPerson = ({name},name)=>name === name ? "found":"nop"
+//  console.log(
+//     findPerson(
+//       [
+//         { name: 'Amay', age: 25 },
+//         { name: 'Akhil', age: 25 },
+//       ],
+//       'Akhil',
+//     ),
+//   )
+
+// 4 Write a function that uses destructuring to extract the first two elements from an array, and returns them in an object with keys 'first' and 'second'.
+
+// Your ES6 code here
+
+const pickFirstAndSecond =([first,second])=>({first,second})
+
+console.log(pickFirstAndSecond(['orange', 'banana', 'apple']))
+// {first: 'orange', second: 'banana'}
+
+console.log(pickFirstAndSecond(['red', 'blue', 'green']))
+// {first: 'red', second: 'blue'}
