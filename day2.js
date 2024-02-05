@@ -85,3 +85,4 @@ console.log(printFirstCharacter([1, 2, 3, 5, 8]))
 
 // console.log(printLastFive([0, 1, 1, 2, 3, 5, 8]))
 // [1, 2, 3, 5, 8]
+
