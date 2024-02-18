@@ -105,3 +105,20 @@ const takeTwoObj = (obj1,obj2)=>{
 }
 const rs = takeTwoObj(obj1,obj2);
 console.log(rs);
+
+//solve some question distructuring 
+
+//1 Use array destructuring to swap the values of two variables without using a temporary variable.
+
+var var1 = 10;
+var var2 = 20;
+
+var [var1,var2] =[var2,var1];
+console.log(var1)
+console.log(var2)
+
+//2 Given an array [1, 2, 3, 4, 5], use destructuring to create a new array that skips the first and third elements.
+
+const arrs = [1,2,3,4,5];
+const [,second,,fourth,...rest]=arrs;
+ console.log([second,fourth,rest])
