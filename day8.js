@@ -45,3 +45,40 @@ const fp = {
     lastname:"patel"
 }
 console.log(firstLastName(fp))
+
+//6Take an array with 5 colours. Create another array by adding 2 more colours to it.
+
+const colors = ['red','blue','green','pink','orange'];
+const anotherColors = [...colors,'megenda','purple'];
+console.log(anotherColors,);
+
+// 7 Take an object with your mother’s name and your age. Now create an object for your sibling by age difference.
+
+const mother = {name:'abc',age:40}
+const sibling = {...mother,age:mother.age-20}
+console.log(sibling)
+
+//8 Write a function birthday() to take a person’s name and age in an object and then increase the age by 1. Return the updated object.
+
+const person = {
+    name:'pado',
+    age:18
+}
+const birthday = (person)=>({...person,age:person.age+1});
+console.log(birthday(person))
+
+//9 Write an ES6 function increaseStock() to take a products’s name and quantity in an object and then increase the quantity by 5.
+
+const product = {
+    name:'apple',
+    quantity:11
+};
+const increaseStock = product =>({...product,quantity:product.quantity+5})
+const ans = increaseStock (product);;
+console.log(ans);
+
+//10 Given an array of numbers, return a new array with square root of each number in it.
+
+const mynum = [10,20,30,3,4,5];
+const result = mynum.map((arr)=>Math.sqrt(arr));
+console.log(result)
