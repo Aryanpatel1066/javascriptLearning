@@ -82,3 +82,115 @@ console.log(ans);
 const mynum = [10,20,30,3,4,5];
 const result = mynum.map((arr)=>Math.sqrt(arr));
 console.log(result)
+
+//lest first understanding map function 
+
+//Yes, that's correct. The map function in JavaScript is a higher-order function that takes a callback function as its argument. This callback function is applied to each element of the array, and a new array is created with the results.
+
+
+//11 Write an ES6 function that takes an array of strings and returns an array with the length of each string using the map method.
+
+const mystr = ['heello','aryan','abc'];
+// const lengthOfStr = mystr.map((str)=>str.length);
+// console.log(lengthOfStr)
+// const lengthstr = str =>str.length;
+// const strLength = mystr.map(lengthstr);
+// console.log(strLength) 
+
+//12 Given an array of strings, use the map function to create a new array where each string is converted to uppercase.
+
+const words = ['apple', 'banana', 'cherry'];
+// Expected result: ['APPLE', 'BANANA', 'CHERRY']
+const upperWord = words.map((p)=>p.toUpperCase());
+console.log(upperWord);
+
+ //13 Given an array of rectangle objects with width and height properties, use the map function to create a new array containing the area of each rectangle.
+
+ const rectangles = [
+    { width: 5, height: 10 },
+    { width: 8, height: 2 },
+    { width: 3, height: 7 }
+  ];
+  // Expected result: [50, 16, 21]
+  const areaOfRectangle = rectangles.map(({width,height})=>width*height);
+  console.log(areaOfRectangle);
+
+  //14 Convert temperatures from Celsius to Fahrenheit:
+// F = (C * 9/5) + 32
+const celsiusTemps = [0, 20, 25, 37];
+// Expected result: [32, 68, 77, 98.6]
+
+const celsiusToFaren = celsiusTemps.map((arr)=>{
+    let F = (arr * 9/5)+32;
+    return F;
+ })
+console.log(celsiusToFaren)
+
+//15 Write an ES6 function that takes an array of numbers and returns an array with each number incremented by 3 using the map method.
+
+// Your ES6 function here
+const numbers = [1, 2, 3, 4, 5];
+// const incrementNumbers = nums=>{
+//     let ans = nums.map((nums)=>nums+3);
+//     return ans;
+// }
+const incrementNumbers = nums => nums.map((num)=>num+3);
+console.log(incrementNumbers(numbers))
+// Output: [4, 5, 6, 7, 8]
+
+//16 Write an ES6 function that takes an array of strings and returns an array with all the strings capitalised using the map method.
+
+// Your ES6 function here
+
+const myArray = ['apple', 'banana', 'cherry'];
+const capitalizeArray = arr => arr.map((arr)=>arr.toUpperCase())
+console.log(capitalizeArray(myArray))
+// Output: ["APPLE", "BANANA", "CHERRY"]
+
+//17 Write an ES6 function that takes an array of objects representing people and returns an array of their ages using the map method.
+
+// Your ES6 function here
+
+const people = [
+    { name: 'Ankit', age: 25 },
+    { name: 'Vinit', age: 24 },
+    { name: 'Shashi', age: 29 },
+  ];
+  const getAges = obj => obj.map(({age})=>age)
+  const ages = getAges(people)
+  console.log(ages) // Output: [25, 24, 29]
+
+  //18 Write an ES6 function that takes an array of objects representing products and returns an array with the product names in all lower case letters using the map method.
+
+// Your ES6 function here
+
+const products = [
+    { name: 'Lip Balm', stock: 100 },
+    { name: 'PERFUME', stock: 400 },
+    { name: 'Socks', stock: 200 },
+  ]
+  const getProductNamesInLowerCase = obj => obj.map(({name})=>name.toLowerCase())
+  console.log(getProductNamesInLowerCase(products))
+  Output: ["lip balm", "perfume", "socks"];
+
+  //19 Write an ES6 function that takes an array of objects representing cities and returns an array of their names using the map method.
+
+// Your ES6 function here
+
+const cities = [
+    { name: 'New York', population: 8538000 },
+    { name: 'Los Angeles', population: 3976000 },
+    { name: 'Bangalore', population: 13608000 },
+  ]
+//   const cityName = obj => obj.name;
+//   const getCityNames = cityObj => cityObj.map(cityName)
+const getCityNames = cityObj => cityObj.map(({name})=>name)
+  console.log(getCityNames(cities))
+  // Output: ["New York", "Los Angeles", "Bangalore"]
+
+  // Your ES6 function here
+
+const fruits = ['apple', 'banana', 'cherry', 'watermelon', 'pineapple']
+const filterLongStrings = strArr => strArr.filter((str)=>str.length >5)
+console.log(filterLongStrings(fruits))
+// Output: ["banana", "cherry", "watermelon", "pineapple"]
