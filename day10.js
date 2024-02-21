@@ -323,3 +323,13 @@ const people = [
 
   console.log(oldestPersonName(people))
   // Output: 'Naina'
+
+  //now we learn about the call back 
+
+  // const nameLengthEvenOrOdd = (name,isOdd,isEven) => name.length % 2 !== 0 ? isOdd():isEven;
+  
+  //  nameLengthEvenOrOdd("pado",()=>console.log("odd"),()=>console.log("even"));
+
+  const nameLengthEvenOrOdd = (name, isOdd, isEven) => name.length % 2 !== 0 ? isOdd() : isEven();
+
+nameLengthEvenOrOdd("pado", () => console.log("odd"), () => console.log("even"));
