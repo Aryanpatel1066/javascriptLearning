@@ -81,14 +81,71 @@
 //     console.log("execution done");
 // })
 
-function nameLength(msg){
-return new Promise((resolve,reject)=>{
-    if(msg.length > 6){
-        resolve(`resolve from server${msg}`);
-    }
-    else{
-        reject(`reject from server${msg}`);
-    }
+// function nameLength(msg){
+// return new Promise((resolve,reject)=>{
+//     if(msg.length > 6){
+//         resolve(`resolve from server${msg}`);
+//     }
+//     else{
+//         reject(`reject from server${msg}`);
+//     }
+// })
+// }
+// nameLength("padopatel").then((msg)=>console.log("the result is :",msg))
+
+
+//** all permission require */
+// Promise.all([fun1,fun2,fun3]).then()
+
+
+//**Promise.any[fun1,fun2,fun3] */
+// only one true require
+
+//lets talk about all in promise
+
+const func1 = new Promise((resolve,reject)=>{
+    setTimeout(()=>{
+         if(Math.random() > 0.5){
+            resolve("func1: you resolve by server")
+         }
+         else{
+            reject("func2: you are rejected by server");
+         }
+    },2000);
+});
+// func1.then(msg=>{
+//     console.log("you are passed by server",msg);
+// }).catch(msg=>{
+//     console.log("you caught by server sorry",msg)
+// })
+// console.log(func1)
+
+const func2 = new Promise((resolve,reject)=>{
+    setTimeout(()=>{
+     if(Math.random() > 0.7){
+        resolve(" func2: you are resolve by server")
+     }
+     else{
+        reject("func2: you are rejected by server");
+     }
+    },2000)
 })
-}
-nameLength("padopatel").then((msg)=>console.log("the result is :",msg))
+// console.log(func1);
+// console.log(func2)
+// example of all method in promise 
+
+// Promise.all([func1,func2]).then((msg)=>{
+//     console.log(msg);
+//     console.log("you both are selected")
+// }).catch((msg)=>{
+//     console.log(msg);
+//     console.log("you both are rejec")
+// })
+
+//example of any method
+
+Promise.any([func1,func2]).then((msg)=>{
+    console.log("any one selected",msg)
+}).catch((msg)=>{
+    console.log("both are reject oops!",msg)
+})
