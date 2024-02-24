@@ -5,4 +5,5 @@
 const operation = require("./myModule");
  
 console.log(operation.mySum(5,6));
-console.log(operation.myMul(10,20))
+console.log(operation.myMul(10,20));
+console.log(operation.sub(10));
